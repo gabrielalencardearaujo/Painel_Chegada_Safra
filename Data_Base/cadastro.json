@@ -1,0 +1,14 @@
+[
+  {
+    "codigo": "C111",
+    "nome": "Fulano da SIlva",
+    "cpf": "111.111.111-11",
+    "parceiro": "Empresa",
+    "base": "PA_SAO",
+    "cep": "070, 071, 072",
+    "status": "ATIVO",
+    "tempoBase": "00:00",
+    "horaMediaChegada": "00:00",
+    "diasTrabalhados" : 0
+  }
+]

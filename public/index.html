@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sequoia - PA_SAO</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../src/assets/css/style.css">
+  <link rel="stylesheet" href="../src/assets/css/style-dropdown.css">
+  <link rel="stylesheet" href="../src/assets/css/mediaqueries.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../src/assets/fontawesome/css/all.css">
+
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="../src/assets/img/favicon.png" type="image/x-icon">
+
+</head>
+
+<body>
+  <main>
+    <header>
+      <!-- 	https://sequoialog.com.br/wp-content/uploads/2022/02/logo-sequoia.webp -->
+      <div class="cabecalho">
+        <img src="https://sequoialog.com.br/wp-content/uploads/2022/02/logo-sequoia.webp" alt="Logo Sequoia">
+        <div class="menu pages">
+          <a href="./index.html">Painel</a>
+          <a href="./cadastro.html">Cadastro</a>
+          <a href="#">Expediente</a>
+        </div>
+      </div>
+      <section class="painel-registro">
+        <h1 class="text-fluid">Painel de Chegada</h1>
+        <div>
+          <div>
+            <label for="ichegada">Registro de Chegada:</label>
+            <input class="input-chegada" type="text" id="ichegada" value="" autofocus>
+            <button class="btn btn-registro" type="button">Registrar</button>
+          </div>
+          <p>PA_SAO</p>
+          <i class="fa-solid fa-motorcycle"></i>
+        </div>
+      </section>
+    </header>
+
+    <section class="painel-chegada">
+      <div class="painel">
+        <h3>Painel Reversa</h3>
+        <div class="lista-tecnicos esperando" id="tecnicos-reversa">
+          
+        </div>
+      </div>
+
+      <div class="painel expedicao">
+        <h3>Painel Expedição</h3>
+        <div class="lista-tecnicos" id="tecnicos-expedicao">
+          <div class="esperando" id="esperando">
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  
+  <script src="./assets/js/bundle.js"></script>
+</body>
+
+</html>

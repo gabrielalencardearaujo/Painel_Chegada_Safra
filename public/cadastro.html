@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - PA_SAO</title>
+
+  <!-- STYLES CSS -->
+  <link rel="stylesheet" href="../src/assets/css/style.css">
+  <link rel="stylesheet" href="../src/assets/css/style-dropdown.css">
+  <link rel="stylesheet" href="../src/assets/css/style-cadastro.css">
+
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="../src/assets/img/favicon.png" type="image/x-icon">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../src/assets/fontawesome/css/all.css">
+
+</head>
+
+<body>
+  <section class="novo-cadastro">
+    <div class="login-box">
+      <form>
+        <div class="user-box">
+          <input class="nome-novo-tecnico" required="" name="" type="text">
+          <label>Nome:</label>
+        </div>
+        <div class="user-box">
+          <input class="cpf-novo-tecnico" required="" name="" type="text">
+          <label>CPF:</label>
+        </div>
+        <div class="user-box">
+          <input class="regiao-novo-tenico" required="" name="" type="text">
+          <label>Região:</label>
+        </div>
+        <div class="user-box">
+          <select class="parceiro-novo-tecnico" required="" name="">
+            <option value=""></option>
+            <option value="DTI">DTI</option>
+            <option value="FENIX">FENIX</option>
+            <option value="TC-EXPRESS">TC-EXPRESS</option>
+          </select>
+          <label>Parceiro:</label>
+        </div>
+        <center>
+          <a class="btn-voltar-cadastro" href="#">
+            VOLTAR
+          </a>
+          <a class="btn-salvar-cadastro" href="#">
+            SALVAR
+          </a>
+        </center>
+      </form>
+    </div>
+  </section>
+
+  <main class="page-cadastro">
+    <header class="container">
+      <!-- 	https://sequoialog.com.br/wp-content/uploads/2022/02/logo-sequoia.webp -->
+      <div class="cabecalho">
+        <img src="https://sequoialog.com.br/wp-content/uploads/2022/02/logo-sequoia.webp" alt="Logo Sequoia">
+        <div class="menu pages">
+          <a href="./index.html">Painel</a>
+          <a href="./cadastro.html">Cadastro</a>
+          <a href="#">Expediente</a>
+        </div>
+      </div>
+      <section class="painel-consulta">
+        <h1>Cadastro</h1>
+        <div>
+          <div class="consultar">
+            <div class="input-nome">
+              <label for="">Nome: </label>
+              <input class="nome-tecnico" type="text" autofocus>
+            </div>
+            <div class="adicionar">
+              <button class="btn novo-tecnico" type="button">+ Novo Técnico</button>
+            </div>
+
+            <div>
+              <div class="simbolo-pasao">
+                <span>PA_SAO</span>
+                <i class="fa-solid fa-motorcycle"></i>
+              </div>
+              <div class="informations">
+                <div>Técnicos Ativos:&nbsp</div>
+                <span class="tecnicos-ativos" id="iativos"></span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <section class="painel-cadastro painel">
+      <h3>Técnicos</h3>
+      <div class="lista-tecnicos">
+
+      </div>
+    </section>
+  </main>
+
+
+  <script src="./assets/js/bundle.js"></script>
+  <!-- <script type="module" src="../src/modules/manager_base.js"></script> -->
+</body>
+
+</html>

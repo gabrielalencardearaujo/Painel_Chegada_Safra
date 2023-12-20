@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --primary-color: #D2FA00;
+  --secondary-color: #343436;
+  --color-reversa: tomato;
+  --color-expedicao: #7355df;
+  --color-safra: #C4DBE5;
+  --color-express: #EF7D00;
+  --color-dti: blue;
+  --color-fenix: rgb(255, 250, 205);
+  --background-primary-color: #F2F2F2;
+  --font-family: 'Saira', sans-serif;
+  --font-size-normal: 16px;
+  --font-size-sub-title: 32px;
+  --font-size-title: 48px;
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--secondary-color);
+  font-family: var(--font-family);
+  font-size: var(--font-size-normal);
+  line-height: 1.1em;
+}
+
+main {
+  min-width: 1100px;
+  max-width: 95vw;
+  height: 95vh;
+  margin: 20px auto;
+}
+
+/* HEADER */
+
+header {
+  padding: 10px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+}
+
+h1 {
+  color: var(--secondary-color);
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: var(--font-size-sub-title);
+  letter-spacing: 0.05em;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cabecalho div{
+  display: flex;
+}
+
+.painel-registro {
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.painel-registro > div{
+  display: flex;
+}
+
+.painel-registro > div > div{
+  margin-right: auto;
+}
+
+.fa-motorcycle, .painel-registro p {
+  margin-left: 5px;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+label{
+  font-size: 1.4em;
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.input-chegada, 
+.btn, 
+.nome-tecnico{
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  border: none;
+  outline: 1px solid var(--secondary-color);
+}
+
+.input-chegada:hover,
+.nome-tecnico:hover{
+  outline: 2px solid var(--secondary-color);
+}
+
+.input-chegada{
+  margin-top: 1px;
+}
+
+.input-chegada:focus,
+.nome-tecnico:focus{
+  outline: 2px solid var(--secondary-color);
+}
+
+.btn{
+  padding: 5px 20px;
+  margin-left: 15px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-weight: bold;
+  transition: transform .5s;
+  letter-spacing: 0.08em;
+  outline: 2px solid var(--secondary-color);
+}
+
+.btn-registro{
+  margin-top: -5px;
+}
+
+.btn:hover{
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  color: var(--background-primary-color);
+  transition: .5s;
+}
+
+.expedido{
+  color: var(--primary-color);
+}
+
+/* MENU */
+.menu{
+  display: flex;
+  z-index: 2;
+  border-radius: 10px;
+}
+
+.menu ul{
+  display: grid;
+  place-items: center;
+}
+
+.menu a{
+  display: flex;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  font-size: 1.3em;
+  font-weight: 600;
+  padding: 0px 20px;
+  align-items: center;
+  border-bottom: 1px solid transparent;
+}
+
+.menu a:hover{
+  cursor: pointer;
+  border-bottom: 1px solid var(--secondary-color);
+  transition: .5s;
+}
+
+/* DROPDOWN */
+.painel-chegada{
+  display: grid;
+  padding: 15px 0px;
+  height: 73vh;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+  background-color: var(--secondary-color);
+}
+
+.painel{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: var(--background-primary-color);
+  outline: 1px solid var(--primary-color);
+  overflow: hidden;
+}
+
+.painel h3{
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 20px;
+  font-weight: bold;
+  font-size: 1.7em;
+}
+
+.lista-tecnicos{
+  padding: 5px;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.divTecnico{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  margin: 5px 0px;
+  color: var(--background-primary-color);
+}
+
+.reversa{
+  color: var(--color-reversa);
+}
+
+.expedido, #hora{
+  color: var(--primary-color);
+}
+
+/*######################## LAYOUT NOVO FAZENDO ####################### */
+.trigger-wrapper{
+  border-radius: 10px;
+  margin: 5px 0px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, .4);
+}
+
+.elemento{
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  align-items: center;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+}
+
+div > hr{
+  height: 30px;
+  background-color: white;
+}
+
+label div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--background-primary-color);
+  font-size: 1.1em;
+  font-weight: 400;
+  margin-right: 10px;
+  padding: 6px;
+}
+
+.nomeTecnico{
+  display: flex;
+  width: 45%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.hora-chegada{
+  display: flex;
+  justify-content: space-between;
+  margin-right: -10px;
+  margin-left: -10px;
+  font-size: 1em;
+}
+
+.status{
+  text-align: center;
+  width: 90%;
+  padding: 10px;
+  font-size: 1.6em;
+  margin-right: 30px;
+  margin-left: -20px;
+  color: var(--background-primary-color);
+}
+
+.status:hover{
+  cursor: pointer;
+}
+
+#hr-detalhes{
+  height: 2px;
+  width: 80%;
+  margin: 0 auto;
+  color: white;
+}
+
+.dropdown{
+  margin-top: -10px;
+  background-color: var(--secondary-color);
+  display: none;
+  padding: 10px;
+}
+
+.div-detalhes{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 15px;
+}
+
+.detalhes{
+  font-size: 1.3em;
+  color: var(--background-primary-color);
+  text-align: center;
+  line-height: 1.4em;
+  font-weight: 600;
+}
+
+.regiao{
+  display: flex;
+  justify-content: center;
+}
+
+.regiao hr{
+  height: 20px;
+}
+
+#ireversa, 
+#iativos{
+  color: tomato;
+}
+
+.expedido{
+  color: var(--primary-color);
+}
+
+#inabase{
+  color: #D4AD68;
+}
+
+#iparceiro{
+  color: var(--color-express);
+}
+
+/* DROPDOWN */
+
+.trigger_input{
+  display: none;
+}
+
+.trigger_input:checked + .trigger-wrapper > .elemento{
+  border-radius: 10px 10px 0px 0px;
+}
+
+.trigger_input:checked + .trigger-wrapper .dropdown{
+  display: block;
+  border-radius: 0px 0px 10px 10px;
+} 
+
+
+/* DRAG AND DROP */
+.dragging{
+  opacity: .5;
+}
+
+/* CADASTRO */
+.page-cadastro{
+  min-width: 900px;
+  max-width: 70vw;
+  height: 95vh;
+  margin: 20px auto;
+}
+
+.consultar{
+  display: flex;
+  align-items: center;
+  padding: 1%;
+}
+
+.adicionar{
+  margin-left: 30px;
+  margin-right: auto;
+}
+
+.simbolo-pasao{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.informations{
+  display: flex;
+  margin-left: auto;
+  justify-content: flex-end;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.painel-cadastro{
+  margin-top: 15px;
+}
+
+.lista-tecnicos{
+  height: 68vh;
+}
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 1249px) {
+  body{
+    font-size: 0.7em;
+  }
+
+  label div{
+    padding: 8px;
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  body{
+    font-size: 0.8em;
+  }
+
+  label div{
+    padding: 10px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  label div{
+    padding: 12px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  body{
+    font-size: 1em;
+  }
+}
