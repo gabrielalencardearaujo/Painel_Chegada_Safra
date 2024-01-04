@@ -1,0 +1,245 @@
+.page-cadastro{
+  min-width: 900px;
+  max-width: 70vw;
+  height: 95vh;
+  margin: 20px auto;
+}
+
+.consultar{
+  display: flex;
+  align-items: center;
+  padding: 1%;
+}
+
+.adicionar{
+  margin-left: 30px;
+  margin-right: auto;
+}
+
+.simbolo-pasao{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.informations{
+  display: flex;
+  margin-left: auto;
+  justify-content: flex-end;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.painel-cadastro{
+  margin-top: 15px;
+}
+
+.lista-tecnicos{
+  height: 68vh;
+}
+
+/* ELEMENTO TECNICO */
+
+.tecnico{
+  position: relative;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.dtlh{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  text-align: center;
+  padding: 15px;
+  margin: 5px 0px;
+  color: var(--background-primary-color);
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+.painel-cadastro hr{
+  height: 1px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.detalhes-completos{
+  font-size: 1.3em;
+}
+
+.delete{
+  position: absolute;
+  right: 25px;
+  top: 10px;
+  width: 18px;
+}
+
+.delete button{
+  background-color: var(--color-reversa);
+  color: var(--background-primary-color);
+  font-size: 1.2em;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.delete button:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: transform .3s;
+}
+
+.nao-encontrado{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.nao-encontrado p{
+  color: grey;
+}
+
+#status-ativo{
+  color: var(--primary-color);
+}
+
+#status-inativo{
+  color: tomato;
+}
+
+#mediaNaBase{
+  color: orange;
+}
+
+#codigo{
+  color: cornflowerblue;
+}
+
+#mChegada{
+  color: lightslategray;
+}
+
+#inome{
+  color: gold;
+}
+
+.dti{
+  color: var(--color-dti);
+}
+
+.tcexpress{
+  color: var(--color-express);
+}
+
+.fenix{
+  color: var(--color-fenix);
+}
+
+
+/* ############## CADASTRO NOVO TECNICO ############## */
+
+.novo-cadastro{
+  margin-top: -20px;
+  display: none;
+  position: absolute;
+  z-index: 4;
+  height: 100vh;
+  width: 100vw;
+  background-size: auto;
+  backdrop-filter: blur(10px);
+}
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: #343436;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+  border-radius: 10px;
+}
+
+.voltar{
+  position: absolute;
+  color: var(--background-primary-color);
+  top: 5px;
+  left: 5px;
+  padding: 5px;
+  margin-bottom: 20px;
+  font-size: 1.6em;
+}
+
+.voltar:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input,
+.login-box .user-box select{
+  width: 100%;
+  padding: 10px 0px 10px 5px;
+  font-size: 16px;
+  color: #F2F2F2;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  border: 1px solid #F2F2F2;
+  outline: none;
+  background: transparent;
+}
+
+.login-box .user-box select option {
+  background-color: var(--secondary-color);
+  color: var(--background-primary-color);
+  text-align: center;
+}
+
+.login-box .user-box label {
+  position: absolute;
+  top: 9px;
+  left: 8px;
+  padding: 0px 5px;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label,
+.login-box .user-box select:focus~label,
+.login-box .user-box select:valid~label{
+  top: -10px;
+  left: 14px;
+  color: #bdb8b8;
+  background-color: var(--secondary-color);
+  font-size: 12px;
+}
+
+.login-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color:  #F2F2F2;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+  border: 1px solid var(--secondary-color);
+}
+
+.login-box form a:hover{
+  border-bottom: 1px solid #F2F2F2;
+}
